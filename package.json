@@ -6,9 +6,9 @@
   "license": "ISC",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html --no-source-maps --dist-dir ./dist",
+    "start-dev": "parcel src/index.html --no-source-maps --dist-dir ./dist",
     "build": "parcel build src/index.html --no-source-maps --dist-dir ./dist",
-    "starrt: "parcel src/index.html --open --port=3000",
+    "start": "parcel src/index.html --open --port=3000",
     "server": "node ./server.js"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
