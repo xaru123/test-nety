@@ -1,19 +1,28 @@
 {
   "name": "chat",
-  "engines": {
-    "node": "16.16.0"
-  },
   "version": "1.0.0",
   "description": "Yandex practicum 18. Chat",
+  "author": "",
+  "license": "ISC",
   "source": "src/index.html",
   "scripts": {
-    "start-dev": "parcel src/index.html --no-source-maps --dist-dir ./build",
+    "start-dev": "parcel build src/index.html --no-source-maps --dist-dir ./dist",
     "build": "parcel src/index.html",
     "start": "parcel src/index.html --open --port=3000",
     "server": "node ./server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "default": {
+      "distDir": "dist",
+      "engines": {
+        "browsers": ">= 50%"
+      }
+    }
+  },
+  "engines": {
+    "node": "16.16.0"
+  },
   "devDependencies": {
     "@parcel/transformer-inline-string": "^2.6.2",
     "@parcel/transformer-sass": "^2.6.2",
@@ -23,12 +32,5 @@
   "dependencies": {
     "express": "^4.18.1",
     "handlebars": "^4.7.7"
-  },
-  "targets": {
-    "default": {
-      "engines": {
-        "browsers": ">= 50%"
-      }
-    }
   }
 }
